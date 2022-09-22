@@ -11,13 +11,11 @@ const Ejercicio3 = () => {
     setJugador(opciones[valor]);
     i = Math.floor(Math.random() * 3);
     setMaquina(opciones[i]);
-    if (i === 0 && valor === 2) setResultado("Perdiste :(");
-    if (i === 2 && valor === 0) setResultado("¡Ganaste!");
-    else {
-      if (i === valor) setResultado("¡Empate! :P");
-      if (i === valor + 1) setResultado("Perdiste :(");
-      if (i === valor - 1) setResultado("¡Ganaste! :D");
-    }
+    if (i === 0 && valor === 2) valor = -1;
+    if (i === 2 && valor === 0) i = -1;
+    if (i === valor) setResultado("¡Empate! :P");
+    if (i === valor + 1) setResultado("Perdiste :(");
+    if (i === valor - 1) setResultado("¡Ganaste! :D");
   };
 
   return (
