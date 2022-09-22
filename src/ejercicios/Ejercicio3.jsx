@@ -6,8 +6,8 @@ const Ejercicio3 = () => {
   const [jugador, setJugador] = useState("?");
   const [maquina, setMaquina] = useState("?");
   const [resultado, setResultado] = useState("?");
-  let i = 0;
-  const elegirOpcion = (valor) => {
+  let i = 0; // i es el valor elegido por la máquina
+  const elegirOpcion = (valor) => { // valor es el elegido por el jugador
     setJugador(opciones[valor]);
     i = Math.floor(Math.random() * 3);
     setMaquina(opciones[i]);
