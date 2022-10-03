@@ -1,33 +1,14 @@
 import React, { useState } from "react";
 
 const Ejercicio4 = () => {
-  let tareas = [
-    {
-      id: 1,
-      hecho: false,
-      tarea: "Médico",
-      descripcion: "Pedir análisis al Dr. Cosme Fulanito",
-    },
-    {
-      id: 2,
-      hecho: true,
-      tarea: "Comer",
-      descripcion: "Preparar pollo con papas",
-    },
-    {
-      id: 3,
-      hecho: false,
-      tarea: "Dormir",
-      descripcion: "Asegurarme de que no molesten",
-    },
-  ];
-  const [id, setId] = useState(4);
+  let tareas = [];
   const [form, setForm] = useState({
     id: "",
     hecho: false,
     nombreTarea: "",
     descripcionTarea: "",
   });
+  const [id, setId] = useState(0);
   const [lista, setLista] = useState(tareas);
 
   const handleCambiar = (e) => {
@@ -127,9 +108,11 @@ const Ejercicio4 = () => {
       <h2>Lista de tareas</h2>
       <table>
         <thead>
-          <td></td>
-          <td width={"400"}></td>
-          <td></td>
+          <tr>
+            <th></th>
+            <th width={"300"}></th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>{listaTareas}</tbody>
       </table>
